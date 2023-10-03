@@ -40,7 +40,7 @@ Create MySQL commands to do the following:
 
 ## ❖・Due・❖
 
-Wednesday, 18 October 2023, at 3:00 PM.
+Monday, 23 October 2023, at 3:00 PM.
 
 ## ❖・Grading・❖
 
