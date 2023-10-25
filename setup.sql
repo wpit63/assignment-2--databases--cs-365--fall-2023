@@ -41,22 +41,17 @@ CREATE TABLE pass (
     PRIMARY KEY (website_URL, username, p_word)
 );
 
-INSERT INTO website VALUES (
-    'https://www.youtube.com',
-    'YouTube'
-);
+INSERT INTO website VALUES ('https://www.youtube.com', 'YouTube');
+INSERT INTO website VALUES ('https://www.twitter.com', 'Twitter');
+INSERT INTO website VALUES ('https://github.com', 'GitHub');
+INSERT INTO website VALUES ('https://www.linkedin.com', 'LinkedIn');
+INSERT INTO website VALUES ('https://www.microsoft.com', 'Microsoft');
+INSERT INTO website VALUES ('https://www.apple.com', 'Apple');
+INSERT INTO website VALUES ('https://www.mozilla.org', 'Mozilla');
+INSERT INTO website VALUES ('https://www.blogger.com', 'Blogger');
+INSERT INTO website VALUES ('https://arca.live', 'Arcalive');
+INSERT INTO website VALUES ('https://arca.live', 'Arcalive'); -- note: make this a different account/ person
 
-INSERT INTO user VALUES (
-    'https://www.youtube.com',
-    'Billy',
-    'Bob',
-    'Billy Channel',
-    'billy@gmail.com'
-);
+INSERT INTO user VALUES ('https://www.youtube.com', 'Billy', 'Bob', 'Billy Channel', 'billy@gmail.com');
 
-INSERT INTO pass VALUES (
-    'https://www.youtube.com'
-    'Billy Channel',
-    'My YouTube Channel Account'
-    AES_ENCRYPT('bobrules!', @key_str, @init_vector, '', @salt)   
-);
+INSERT INTO pass VALUES ('https://www.youtube.com', 'Billy Channel', 'My YouTube Channel Account', AES_ENCRYPT('bobrules!', @key_str, @init_vector, '', @salt));
