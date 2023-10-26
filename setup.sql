@@ -53,5 +53,23 @@ INSERT INTO website VALUES ('https://arca.live', 'Arcalive');
 INSERT INTO website VALUES ('https://arca.live', 'Arcalive'); -- note: make this a different account/ person
 
 INSERT INTO user VALUES ('https://www.youtube.com', 'Billy', 'Bob', 'Billy Channel', 'billy@gmail.com');
+INSERT INTO user VALUES ('https://www.twitter.com', 'Victor', 'Mays', 'vmays90', 'victormays@gmail.com');
+INSERT INTO user VALUES ('https://github.com', 'Rae', 'Taylor', 'empress5', 'empress5@hotmail.com');
+INSERT INTO user VALUES ('https://www.linkedin.com', 'Mari', 'Garcia', 'Mari_G', 'mari@outlook.com');
+INSERT INTO user VALUES ('https://www.microsoft.com', 'Karen', 'Aijou', 'starlight_actress', 'kaijou@outlook.com');
+INSERT INTO user VALUES ('https://www.apple.com', 'Amelia', 'Watson', 'acedetective', 'watson@gmail.com');
+INSERT INTO user VALUES ('https://www.mozilla.org', 'Serika', 'Kuromi', 'plsnoscam', 'catsaysmeow@hotmail.com');
+INSERT INTO user VALUES ('https://www.blogger.com', 'Jason', 'Bright', 'rocketman', 'rocketman@gmail.com');
+INSERT INTO user VALUES ('https://arca.live', 'John', 'Smith', 'khajituser', 'jdoe@gmail.com');
+INSERT INTO user VALUES ('https://arca.live', 'Sue', 'Hong', 'nodeuser', 'shong@outlook.com');
 
-INSERT INTO pass VALUES ('https://www.youtube.com', 'Billy Channel', 'My YouTube Channel Account', AES_ENCRYPT('bobrules!', @key_str, @init_vector, '', @salt));
+INSERT INTO pass VALUES ('https://www.youtube.com', 'Billy Channel', AES_ENCRYPT('bobrules!', @key_str, @init_vector, '', @salt), 'My YouTube Channel Account');
+INSERT INTO pass VALUES ('https://www.twitter.com', 'vmays90', AES_ENCRYPT('stay_OUT', @key_str, @init_vector, '', @salt), '5/70 alternative accounts');
+INSERT INTO pass VALUES ('https://github.com', 'empress5', AES_ENCRYPT('relaire', @key_str, @init_vector, '', @salt), 'why do i have this');
+INSERT INTO pass VALUES ('https://www.linkedin.com', 'Mari_G', AES_ENCRYPT('sunny', @key_str, @init_vector, '', @salt), 'job pls');
+INSERT INTO pass VALUES ('https://www.microsoft.com', 'starlight_actress', AES_ENCRYPT('mr_white', @key_str, @init_vector, '', @salt), '');
+INSERT INTO pass VALUES ('https://www.apple.com', 'acedetective', AES_ENCRYPT('mythw4tch', @key_str, @init_vector, '', @salt), 'for work');
+INSERT INTO pass VALUES ('https://www.mozilla.org', 'plsnoscam', AES_ENCRYPT('mastershiba', @key_str,  @init_vector, '', @salt), '');
+INSERT INTO pass VALUES ('https://www.blogger.com', 'rocketman', AES_ENCRYPT('glowing1', @key_str, @init_vector, '', @salt), '');
+INSERT INTO pass VALUES ('https://arca.live', 'khajituser', AES_ENCRYPT('letmein', @key_str, @init_vector, '', @salt), 'outsider');
+INSERT INTO pass VALUES ('https://arca.lvie', 'nodeuser', AES_ENCRYPT('idiottalk', @key_str, @init_vector, '', @salt), 'insider');
