@@ -28,10 +28,10 @@ CREATE TABLE user (
 CREATE TABLE pass (
     website_URL VARCHAR(128) NOT NULL,
     username VARCHAR(64) NOT NULL,
-    p_word VARBINARY(512) NOT NULL,
+    p_word VARBINARY(512),
     comment CHAR(240),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (website_URL, username, p_word)
+    PRIMARY KEY (website_URL, username, comment)
 );
 
 INSERT INTO website VALUES ('https://www.youtube.com', 'YouTube');
