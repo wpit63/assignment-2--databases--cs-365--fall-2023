@@ -6,16 +6,9 @@ USE passwords;
 SET time_zone='+00:00';
 
 SET block_encryption_mode = 'aes-256-cbc';
-SET @key_str = UNHEX(SHA2('key string', 128));
+SET @key_str = UNHEX(SHA2('key string', 512));
 SET @init_vector = RANDOM_BYTES(16);
 SET @salt = RANDOM_BYTES(8);
-
--- example password insert
--- INSERT INTO user (
---     url
---     username
---     AES_ENCRYPT('string', @key_str, @init_vector, '', @salt)  
--- )
 
 CREATE TABLE website (
     website_URL VARCHAR(128) NOT NULL,
@@ -35,7 +28,7 @@ CREATE TABLE user (
 CREATE TABLE pass (
     website_URL VARCHAR(128) NOT NULL,
     username VARCHAR(64) NOT NULL,
-    p_word VARBINARY(128) NOT NULL,
+    p_word VARBINARY(512) NOT NULL,
     comment CHAR(240),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (website_URL, username, p_word)
