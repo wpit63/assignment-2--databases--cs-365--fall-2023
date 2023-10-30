@@ -49,4 +49,4 @@ SET autocommit = ON;
 
 -- remove a password
 
-UPDATE pass SET p_word = NULL WHERE website_URL='https://www.youtube.com';
+DELETE FROM pass WHERE p_word WHERE p_word = AES_ENCRYPT('bobrules!', @key_str, @init_vector);
